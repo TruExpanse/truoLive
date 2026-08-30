@@ -1,7 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T08:06:38.517Z",
-  "expiresAt": "2026-09-06T08:06:38.517Z",
+  "channel": "trustore-wordpress",
+  "channels": [
+    "wordpress"
+  ],
+  "generatedAt": "2026-08-30T09:47:12.794Z",
+  "expiresAt": "2026-09-06T09:47:12.195Z",
+  "publicIndexUrl": "https://raw.githubusercontent.com/TruExpanse/truLive/main/trustore/release-index.json",
   "version": {
     "wordpress": "0.1.12"
   },
@@ -11,11 +16,10 @@
         "package": "truestore-plugin",
         "version": "0.1.12",
         "filename": "truestore-plugin-0.1.12.zip",
-        "checksum": "sha256:0a0a320b418671933c30a455ae250fe1081eb2ffe71f7f0096b77cc629790d47",
-        "size": 179575,
-        "entryCount": 120,
+        "checksum": "sha256:9649d1fc1a093d05061eaae770186f859d49226fd6cfa8e7fb88c01f27626cf5",
+        "size": 179840,
+        "entryCount": 121,
         "mainFile": "truestore-plugin/truestore.php",
-        "path": "../wordpress-artifacts/truestore-plugin-0.1.12.zip",
         "channel": "stable",
         "releaseClass": "maintenance"
       },
@@ -23,17 +27,30 @@
         "package": "storexpanse-connect",
         "version": "0.1.12",
         "filename": "storexpanse-connect-0.1.12.zip",
-        "checksum": "sha256:dee9713aa535d77e5746f509ec3e23e9d84c5ea8236f54f8f1a470c89763ba48",
+        "checksum": "sha256:37888255cea9feadfa64d2091363e55dca8117ff68b5b815a0149518990aac24",
         "size": 42920,
         "entryCount": 26,
         "mainFile": "storexpanse-connect/storexpanse-connect.php",
-        "path": "../wordpress-artifacts/storexpanse-connect-0.1.12.zip",
         "channel": "stable",
         "releaseClass": "maintenance"
       }
     ]
   },
-  "checks": [
-    "npm run release:wordpress:pack:verify"
-  ]
+  "metadata": {
+    "strategy": "plugin-update-checker",
+    "endpoint": "https://updates.truexpanse.dev/trustore/v1/plugin/update"
+  },
+  "download": {
+    "strategy": "private-update-service",
+    "endpoint": "https://updates.truexpanse.dev/trustore/v1/download"
+  },
+  "storexpanse": {
+    "metadata": {
+      "strategy": "installation-authorization-header",
+      "endpoint": "https://updates.truexpanse.dev/storexpanse/v1/plugin/update"
+    },
+    "download": {
+      "strategy": "short-lived-artifact-ticket-header"
+    }
+  }
 }
