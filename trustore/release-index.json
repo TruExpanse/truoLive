@@ -1,82 +1,39 @@
 {
   "schemaVersion": 1,
-  "channel": "trustore-wordpress",
-  "channels": [
-    "wordpress",
-    "frontend"
-  ],
-  "generatedAt": "2026-05-29T13:42:54.614Z",
-  "publicIndexUrl": "https://raw.githubusercontent.com/TruExpanse/truLive/main/trustore/release-index.json",
+  "generatedAt": "2026-08-30T08:06:38.517Z",
+  "expiresAt": "2026-09-06T08:06:38.517Z",
   "version": {
-    "wordpress": "0.1.11",
-    "frontend": "0.1.11"
+    "wordpress": "0.1.12"
   },
   "wordpress": {
     "artifacts": [
       {
         "package": "truestore-plugin",
-        "version": "0.1.11",
-        "filename": "truestore-plugin-0.1.11.zip",
-        "checksum": "sha256:b09ad063108b5c31d1f15e94b87def910f7d691d6f9711a91f85f469284ee25f",
-        "entryCount": 5,
-        "mainFile": "truestore-plugin/truestore.php"
+        "version": "0.1.12",
+        "filename": "truestore-plugin-0.1.12.zip",
+        "checksum": "sha256:0a0a320b418671933c30a455ae250fe1081eb2ffe71f7f0096b77cc629790d47",
+        "size": 179575,
+        "entryCount": 120,
+        "mainFile": "truestore-plugin/truestore.php",
+        "path": "../wordpress-artifacts/truestore-plugin-0.1.12.zip",
+        "channel": "stable",
+        "releaseClass": "maintenance"
       },
       {
-        "package": "truexpanse-export-adapter",
-        "version": "0.1.11",
-        "filename": "truexpanse-export-adapter-0.1.11.zip",
-        "checksum": "sha256:c4c4acb40c06e366da501536068e8a49dc8774b0ac7f5dccaff563b8b8ec6eda",
-        "entryCount": 3,
-        "mainFile": "truexpanse-export-adapter/truestore-truexpanse-export-adapter.php"
+        "package": "storexpanse-connect",
+        "version": "0.1.12",
+        "filename": "storexpanse-connect-0.1.12.zip",
+        "checksum": "sha256:dee9713aa535d77e5746f509ec3e23e9d84c5ea8236f54f8f1a470c89763ba48",
+        "size": 42920,
+        "entryCount": 26,
+        "mainFile": "storexpanse-connect/storexpanse-connect.php",
+        "path": "../wordpress-artifacts/storexpanse-connect-0.1.12.zip",
+        "channel": "stable",
+        "releaseClass": "maintenance"
       }
     ]
   },
-  "frontend": {
-    "package": "@truexpanse/trustore-core",
-    "version": "0.1.11",
-    "artifacts": [
-      {
-        "package": "@truexpanse/trustore-core",
-        "role": "package",
-        "version": "0.1.11",
-        "filename": "truexpanse-trustore-core-0.1.11.tgz",
-        "checksum": "sha256:04f56045ce423bace08c6208b0f5ae598096a5bce430aad96b3504f912bee28f",
-        "fileCount": 6
-      },
-      {
-        "package": "@truexpanse/trustore-frontend-template",
-        "role": "template",
-        "version": "0.1.11",
-        "filename": "truexpanse-trustore-frontend-template-0.1.11.tgz",
-        "checksum": "sha256:c760c82fc7f202477ea620603decf352aa1a1ab8a71faf32246abe16c90d725b",
-        "fileCount": 498
-      }
-    ],
-    "manifest": {
-      "schemaVersion": 1,
-      "package": "@truexpanse/trustore-core",
-      "version": "0.1.11",
-      "requires": {
-        "truexpanseExportContract": ">=2.2 <3",
-        "astro": ">=6 <7",
-        "node": ">=20"
-      },
-      "migrations": [],
-      "checksums": {
-        "@truexpanse/trustore-core": "sha256:04f56045ce423bace08c6208b0f5ae598096a5bce430aad96b3504f912bee28f",
-        "@truexpanse/trustore-upgrade-cli": "sha256:b11e22f588514355444605fbc07270811427abbdebd12ccde5d7465692660e29",
-        "@truexpanse/trustore-frontend-template": "sha256:c760c82fc7f202477ea620603decf352aa1a1ab8a71faf32246abe16c90d725b"
-      },
-      "protectedData": {
-        "guard": true
-      },
-      "rollback": {
-        "strategy": "git-revert"
-      }
-    }
-  },
-  "download": {
-    "strategy": "private-update-service",
-    "endpoint": "https://updates.truexpanse.dev/trustore/v1/download"
-  }
+  "checks": [
+    "npm run release:wordpress:pack:verify"
+  ]
 }
