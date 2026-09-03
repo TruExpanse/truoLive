@@ -4,35 +4,54 @@
   "channels": [
     "wordpress"
   ],
-  "generatedAt": "2026-08-31T09:32:05.629Z",
-  "expiresAt": "2026-09-07T09:32:04.935Z",
+  "generatedAt": "2026-09-03T16:20:28.509Z",
+  "expiresAt": "2026-09-10T16:20:28.214Z",
   "publicIndexUrl": "https://raw.githubusercontent.com/TruExpanse/truLive/main/trustore/release-index.json",
   "version": {
-    "wordpress": "0.1.13"
+    "wordpress": "0.1.20",
+    "connect": "0.1.20",
+    "theme": "1.1.1"
   },
   "wordpress": {
     "artifacts": [
       {
+        "kind": "plugin",
         "package": "truestore-plugin",
-        "version": "0.1.13",
-        "filename": "truestore-plugin-0.1.13.zip",
-        "checksum": "sha256:528f1336d039aa1b75c6eaf75e0e17a722a082a4ef959f04c546df6de6c870ff",
-        "size": 179841,
+        "version": "0.1.20",
+        "filename": "truestore-plugin-0.1.20.zip",
+        "checksum": "sha256:e3dc4b031f800b0e6dc1988e428ced4161b68e6ed9a6cd5bedaa2a119cf490b2",
+        "size": 179840,
         "entryCount": 121,
         "mainFile": "truestore-plugin/truestore.php",
         "channel": "stable",
-        "releaseClass": "maintenance"
+        "releaseClass": "maintenance",
+        "sourceRevision": "50cf3e1ed8987eb61df134badff7e3ffafb66a67"
       },
       {
+        "kind": "plugin",
         "package": "storexpanse-connect",
-        "version": "0.1.13",
-        "filename": "storexpanse-connect-0.1.13.zip",
-        "checksum": "sha256:1de0b881e7ec86ecd48ca8188bf4d488f1a624237eb3b5219faa76ab209d2766",
-        "size": 42920,
-        "entryCount": 26,
+        "version": "0.1.20",
+        "filename": "storexpanse-connect-0.1.20.zip",
+        "checksum": "sha256:64e3c816ebfe169f5690ce6c3859a314c8872a728ae2d8aff832c0cd7f80ae7a",
+        "size": 52370,
+        "entryCount": 30,
         "mainFile": "storexpanse-connect/storexpanse-connect.php",
         "channel": "stable",
-        "releaseClass": "maintenance"
+        "releaseClass": "maintenance",
+        "sourceRevision": "50cf3e1ed8987eb61df134badff7e3ffafb66a67"
+      },
+      {
+        "kind": "theme",
+        "package": "storexpanse",
+        "version": "1.1.1",
+        "filename": "storexpanse-1.1.1.zip",
+        "checksum": "sha256:39671cde36ebcb4b53245ec9f890dcf995b1721d384f79130e26ed47c60948e6",
+        "size": 1101604,
+        "mainFile": "storexpanse/style.css",
+        "channel": "stable",
+        "releaseClass": "maintenance",
+        "sourceRevision": "017566abe2cace5c48574a483b7aabe6867f639d",
+        "editorSourceRevision": "6d53e7d02af1e31e65226cfde9c8ffa293161d4e"
       }
     ]
   },
@@ -48,6 +67,10 @@
     "metadata": {
       "strategy": "installation-authorization-header",
       "endpoint": "https://updates.storexpanse.com/storexpanse/v1/plugin/update"
+    },
+    "themeMetadata": {
+      "strategy": "installation-authorization-header",
+      "endpoint": "https://updates.storexpanse.com/storexpanse/v1/theme/update"
     },
     "download": {
       "strategy": "short-lived-artifact-ticket-header"
