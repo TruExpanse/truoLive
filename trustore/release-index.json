@@ -4,8 +4,8 @@
   "channels": [
     "wordpress"
   ],
-  "generatedAt": "2026-09-03T16:20:28.509Z",
-  "expiresAt": "2026-09-10T16:20:28.214Z",
+  "generatedAt": "2026-09-04T07:43:18.923Z",
+  "expiresAt": "2026-09-11T07:43:18.655Z",
   "publicIndexUrl": "https://raw.githubusercontent.com/TruExpanse/truLive/main/trustore/release-index.json",
   "version": {
     "wordpress": "0.1.20",
